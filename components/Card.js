@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
-export default function Card({ title, description }) {
+export default function Card({ title, description, image }) {
   const [isOnCart, setIsOnCart] = useState(false);
   return (
     <View style={styles.cardContainer}>
       <Image
         source={{
-          uri: "https://i.pinimg.com/originals/b9/c4/7e/b9c47ef70bff06613d397abfce02c6e7.jpg",
+          uri: image,
         }}
         style={styles.cardImage}
       />
