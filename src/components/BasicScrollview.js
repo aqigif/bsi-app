@@ -1,4 +1,4 @@
-const { ScrollView, Text } = require("react-native");
+import { ScrollView, Text } from "react-native";
 
 const DATA = [
   "Halo BSI a",
