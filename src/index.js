@@ -1,19 +1,22 @@
-import { View, Text } from "react-native";
-import RowLayout from "./components/RowLayout";
-import ColumnLayout from "./components/ColumnLayout";
-import BasicScrollView from "./components/BasicScrollview";
-import BasicFlatlist from "./components/BasicFlatlist";
-import FlexboxExample from "./components/Flexbox";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import HomeScreen from './screens/Home';
+import DetailsScreen from './screens/Details';
+import OneScreen from './screens/One';
 
-export default function AppSrc() {
+const Stack = createStackNavigator();
+
+const AppSrc = () => {
   return (
-    <>
-        {/* <RowLayout /> */}
-        {/* <ColumnLayout /> */}
-        {/* <BasicScrollView /> */}
-        {/* <BasicFlatlist /> */}
-        <FlexboxExample />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="One" component={OneScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
+export default AppSrc;

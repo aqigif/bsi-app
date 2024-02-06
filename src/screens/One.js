@@ -2,7 +2,7 @@ import { StyleSheet, TextInput, View, Button } from "react-native";
 import Card from "../components/Card";
 import { useState } from "react";
 
-export default function One() {
+export default function OneScreen() {
   const [titleTemp, setTitleTemp] = useState("Ini judul");
   const [title, setTitle] = useState(titleTemp)
   return (
