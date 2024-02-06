@@ -15,11 +15,11 @@ const HomeScreen = ({ navigation }) => {
       />
       <Button
         title="Go to Sync"
-        onPress={() => navigation.navigate('Synchrounous')}
+        onPress={() => navigation.navigate('Synchronous')}
       />
       <Button
         title="Go to Async"
-        onPress={() => navigation.navigate('Asynchrounous')}
+        onPress={() => navigation.navigate('Asynchronous')}
       />
     </View>
   );
