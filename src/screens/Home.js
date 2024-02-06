@@ -13,6 +13,14 @@ const HomeScreen = ({ navigation }) => {
         title="Go to One"
         onPress={() => navigation.navigate('One')}
       />
+      <Button
+        title="Go to Sync"
+        onPress={() => navigation.navigate('Synchrounous')}
+      />
+      <Button
+        title="Go to Async"
+        onPress={() => navigation.navigate('Asynchronous')}
+      />
     </View>
   );
 };
