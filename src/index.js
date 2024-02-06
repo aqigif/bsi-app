@@ -12,8 +12,8 @@ const AppSrc = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="One" component={OneScreen} />
+        <Stack.Screen name="Details" options={{headerTitle: 'Ini Detail'}} component={DetailsScreen} />
+        <Stack.Screen name="One" options={{headerShown: false}} component={OneScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
