@@ -1,33 +1,5 @@
-Wrap Up React Native day 2
-1. Flexbox Layouts :  https://reactnative.dev/docs/flexbox
-2. React Navigation : https://reactnavigation.org/docs/getting-started/
-```bash 
-npm install @react-navigation/native @react-navigation/stack react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/viewpager
-```
-- navigate between screen : https://reactnavigation.org/docs/navigating
 
-3. Quotes rule: 
-
-const name = "Risky"
-
-"" => doubleQuote => 
-```
-`fardu 'ain ${name} dasdsa`
-```
-
-'' => singleQuote => 
-```
-'mario teguh: "itu sangat super"' + name
-```
-`` => backtick =>   
-```
-`dasdasdas
-${name}
-dsadsadas
-dasdas`
-```
-
-4. OOP
+OOP
 Object Oriented Programming
 --------------------------
 Object UMUM => Human, Benda, Hewan, Tumbuhan

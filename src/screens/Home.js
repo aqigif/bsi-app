@@ -30,6 +30,10 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Callback"
         onPress={() => navigation.navigate('Callback')}
       />
+      <Button
+        title="Go to OOP"
+        onPress={() => navigation.navigate('OOP')}
+      />
     </View>
   );
 };
