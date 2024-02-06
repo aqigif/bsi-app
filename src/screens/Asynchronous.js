@@ -19,6 +19,7 @@ const AsynchronousScreen = () => {
     <View>
       <Text>Asynchronous Component</Text>
       <Button title="Run Asynchronous Operation" onPress={handleAsyncClick} />
+      <Text>result will show on console</Text>
     </View>
   );
 };

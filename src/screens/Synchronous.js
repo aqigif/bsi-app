@@ -16,6 +16,7 @@ const SynchronousScreen = () => {
     <View>
       <Text>Synchronous Component</Text>
       <Button title="Run Synchronous Operation" onPress={handleClick} />
+      <Text>result will show on console</Text>
     </View>
   );
 };

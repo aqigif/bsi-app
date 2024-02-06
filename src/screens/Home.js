@@ -23,7 +23,7 @@ const HomeScreen = ({ navigation }) => {
       />
       <Button
         title="Go to Promise"
-        onPress={() => navigation.navigate('Asynchronous')}
+        onPress={() => navigation.navigate('Promise')}
       />
     </View>
   );
