@@ -6,6 +6,7 @@ import DetailsScreen from './screens/Details';
 import OneScreen from './screens/One';
 import SynchronousScreen from "./screens/Synchronous";
 import AsynchronousScreen from "./screens/Asynchronous";
+import AsyncAwaitPromiseExample from "./screens/Promise";
 
 const Stack = createStackNavigator();
 
@@ -17,7 +18,7 @@ const AppSrc = () => {
         <Stack.Screen name="Details" options={{headerTitle: 'Ini Detail'}} component={DetailsScreen} />
         <Stack.Screen name="One" options={{headerShown: false}} component={OneScreen} />
         <Stack.Screen name="Synchronous" options={{headerShown: false}} component={SynchronousScreen} />
-        <Stack.Screen name="Asynchronous" options={{headerShown: false}} component={AsynchronousScreen} />
+        <Stack.Screen name="Asynchronous" options={{headerShown: false}} component={AsyncAwaitPromiseExample} />
       </Stack.Navigator>
     </NavigationContainer>
   );
