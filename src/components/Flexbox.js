@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
     mainContentText: {
         height: 100,
         width: 100,
-        backgroundColor: 'blue'
+        backgroundColor: 'blue',
+        color: 'white'
     },
     footer: {
         flex: 1,
