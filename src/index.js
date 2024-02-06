@@ -6,7 +6,8 @@ import DetailsScreen from './screens/Details';
 import OneScreen from './screens/One';
 import SynchronousScreen from "./screens/Synchronous";
 import AsynchronousScreen from "./screens/Asynchronous";
-import AsyncAwaitPromiseExample from "./screens/Promise";
+import AsyncAwaitPromiseExample from "./screens/AsyncAwait";
+import CallbackPromiseExample from "./screens/Callback";
 
 const Stack = createStackNavigator();
 
@@ -19,7 +20,8 @@ const AppSrc = () => {
         <Stack.Screen name="One" options={{headerShown: false}} component={OneScreen} />
         <Stack.Screen name="Synchronous" options={{}} component={SynchronousScreen} />
         <Stack.Screen name="Asynchronous" options={{}} component={AsynchronousScreen} />
-        <Stack.Screen name="Promise" options={{}} component={AsyncAwaitPromiseExample} />
+        <Stack.Screen name="AsyncAwait" options={{}} component={AsyncAwaitPromiseExample} />
+        <Stack.Screen name="Callback" options={{}} component={CallbackPromiseExample} />
       </Stack.Navigator>
     </NavigationContainer>
   );
