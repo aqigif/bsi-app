@@ -3,6 +3,7 @@ import RowLayout from "./components/RowLayout";
 import ColumnLayout from "./components/ColumnLayout";
 import BasicScrollView from "./components/BasicScrollview";
 import BasicFlatlist from "./components/BasicFlatlist";
+import FlexboxExample from "./components/Flexbox";
 
 export default function AppSrc() {
   return (
@@ -10,7 +11,8 @@ export default function AppSrc() {
         {/* <RowLayout /> */}
         {/* <ColumnLayout /> */}
         {/* <BasicScrollView /> */}
-        <BasicFlatlist />
+        {/* <BasicFlatlist /> */}
+        <FlexboxExample />
     </>
   );
 }
