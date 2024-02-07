@@ -1,7 +1,8 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { View, Text, Button, ScrollView, Image } from "react-native";
 
-const FetchScreen = ({ navigation }) => {
+const AxiosScreen = ({ navigation }) => {
   // tipe data
   // string => all characters in keyboard with quote => "" '' `` => contoh : "Saya Budi"
   // number => 1-9 => contoh : 90909
@@ -12,10 +13,11 @@ const FetchScreen = ({ navigation }) => {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    console.log("FETCH START");
-    fetch("https://reqres.in/api/users?page=2")
-      .then((response) => response.json())
-      .then((response) => setResult(response?.data))
+    axios({
+      url: "https://reqres.in/api/users?page=2",
+      method: "GET",
+    })
+      .then((response) => setResult(response.data?.data))
       .catch((error) => console.error(error));
   }, []);
 
@@ -48,4 +50,4 @@ const FetchScreen = ({ navigation }) => {
   );
 };
 
-export default FetchScreen;
+export default AxiosScreen;
