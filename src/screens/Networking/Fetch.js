@@ -14,8 +14,14 @@ const FetchScreen = ({ navigation }) => {
   useEffect(() => {
     console.log("FETCH START");
     fetch("https://reqres.in/api/users?page=2")
-      .then((response) => response.json())
-      .then((response) => setResult(response?.data))
+      .then((response) => {
+        console.log("res", response);
+        return response.json();
+      })
+      .then((response) => {
+        console.log("res data", response);
+        setResult(response?.data);
+      })
       .catch((error) => console.error(error));
   }, []);
 
@@ -49,3 +55,6 @@ const FetchScreen = ({ navigation }) => {
 };
 
 export default FetchScreen;
+
+// ARRAY local => TO STATE
+// ARRAY from network (REST API) => FETCH/AXIOS

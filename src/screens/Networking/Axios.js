@@ -13,13 +13,30 @@ const AxiosScreen = ({ navigation }) => {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
+    // getWithCallback();
+    getWithAsyncAwait();
+  }, []);
+
+  const getWithCallback = () => {
     axios({
       url: "https://reqres.in/api/users?page=2",
       method: "GET",
     })
       .then((response) => setResult(response.data?.data))
       .catch((error) => console.error(error));
-  }, []);
+  };
+  const getWithAsyncAwait = async () => {
+    try {
+      const response = await axios({
+        url: "https://reqres.in/api/users?page=2",
+        method: "GET",
+      });
+      console.log(response)
+      setResult(response.data?.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <ScrollView style={{ paddingHorizontal: 10, paddingVertical: 5 }}>
