@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Button, ScrollView } from "react-native";
+import { View, Text, Button, ScrollView, Image } from "react-native";
 
 const FetchScreen = ({ navigation }) => {
   // tipe data
@@ -19,13 +19,31 @@ const FetchScreen = ({ navigation }) => {
   }, []);
 
   return (
-    <ScrollView>
+    <ScrollView
+      style={{ paddingHorizontal: 10, paddingVertical: 5 }}>
       {result &&
         result.map((item) => (
-          <View key={item.id}>
-            <Text>
-              {item.first_name} {item.last_name}
-            </Text>
+          <View
+            key={item.id}
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              columnGap: 5, 
+              marginBottom: 10
+            }}
+          >
+            <Image
+              source={{ uri: item.avatar }}
+              style={{ height: 50, width: 50, borderRadius: 25 }}
+            />
+            <View>
+              <Text>
+                {item.first_name} {item.last_name}
+              </Text>
+              <Text>
+                {item.email}
+              </Text>
+            </View>
           </View>
         ))}
     </ScrollView>
