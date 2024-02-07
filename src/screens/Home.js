@@ -34,6 +34,11 @@ const HomeScreen = ({ navigation }) => {
         title="Go to OOP"
         onPress={() => navigation.navigate('OOP')}
       />
+      <Text>Networking</Text>
+      <Button
+        title="Go to Fetch"
+        onPress={() => navigation.navigate('Fetch')}
+      />
     </View>
   );
 };
