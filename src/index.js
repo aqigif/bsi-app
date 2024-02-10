@@ -12,6 +12,7 @@ import FunctionalComponentWithOOP from "./screens/OOP"
 import FetchScreen from "./screens/Networking/Fetch"
 import AxiosScreen from "./screens/Networking/Axios";
 import PostScreen from "./screens/Networking/Post";
+import ReduxConcept from "./screens/ReduxConcept"
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const AppSrc = () => {
         <Stack.Screen name="Fetch" options={{}} component={FetchScreen} />
         <Stack.Screen name="Axios" options={{}} component={AxiosScreen} />
         <Stack.Screen name="Post" options={{}} component={PostScreen} />
+        <Stack.Screen name="ReduxConcept" options={{}} component={ReduxConcept} />
       </Stack.Navigator>
     </NavigationContainer>
   );
