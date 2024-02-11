@@ -1,53 +1,35 @@
  
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-import { increment, decrement } from '../reducers/reducer';
+import { increment, decrement } from '../actions/action';
 
 const ReduxConcept = () => {
   const dispatch = useDispatch()
 
   const counter = useSelector(state => state.counter)
 
+  const handleIncrement = () => {
+    dispatch(increment());
+  };
+
+  const handleDecrement = () => {
+    dispatch(decrement());
+  };
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{counter}</Text>
-      <View style={{ flexDirection: "row" }}>
-        <TouchableHighlight style={{ ...styles.button, backgroundColor: "red" }} onPress={() => dispatch(decrement())}>
-          <Text>-</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={{ ...styles.button, backgroundColor: "limegreen" }} onPress={() => dispatch(increment())}>
-          <Text>+</Text>
-        </TouchableHighlight>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={{ fontSize: 24 }}>Counter App</Text>
+      <Text style={{ fontSize: 48 }}>{counter}</Text>
+      <View style={{ flexDirection: 'row', marginTop: 20 }}>
+        <Button title="Increment" onPress={handleIncrement} />
+        <Button title="Decrement" onPress={handleDecrement} />
       </View>
     </View>
   )
 };
 
 export default ReduxConcept;
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    text: {
-      fontSize: 100,
-      fontWeight: "bold"
-    },
-    button: {
-      width: 100,
-      height: 50,
-      margin: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      borderRadius: 10,
-      borderColor: "black",
-      borderStyle: "solid",
-      borderWidth: 2
-    }
-  });
