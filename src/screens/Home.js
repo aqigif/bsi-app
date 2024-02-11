@@ -51,6 +51,10 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Redux Concept"
         onPress={() => navigation.navigate('ReduxConcept')}
       />
+      <Button
+        title="Go to Integrasi Redux"
+        onPress={() => navigation.navigate('IntegrasiRedux')}
+      />
     </View>
   );
 };
