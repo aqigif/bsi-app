@@ -55,6 +55,10 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Integrasi Redux"
         onPress={() => navigation.navigate('IntegrasiRedux')}
       />
+      <Button
+        title="Go to Integrasi Fetch API"
+        onPress={() => navigation.navigate('IntegrasiFetch')}
+      />
     </View>
   );
 };

@@ -1,4 +1,4 @@
-
+import { FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_FAILURE } from "../types/types";
 // Actions
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
@@ -17,7 +17,10 @@ export const decrement = () => ({
 // Initial state
 const initialState = {
     counter: 0,
-    notes: []
+    notes: [],
+    products: [],
+    loading: false,
+    error: ''
 }
 
 // Root reducer
@@ -52,6 +55,25 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 notes: updatedNotes
+        };
+        case FETCH_PRODUCTS_REQUEST:
+        return {
+            ...state,
+            loading: true
+        };
+        case FETCH_PRODUCTS_SUCCESS:
+        return {
+            ...state,
+            loading: false,
+            products: action.payload,
+            error: ''
+        };
+        case FETCH_PRODUCTS_FAILURE:
+        return {
+            ...state,
+            loading: false,
+            products: [],
+            error: action.payload
         };
         default:
             return state

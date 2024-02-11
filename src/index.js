@@ -14,6 +14,7 @@ import AxiosScreen from "./screens/Networking/Axios";
 import PostScreen from "./screens/Networking/Post";
 import ReduxConcept from "./screens/ReduxConcept"
 import IntegrasiRedux from "./screens/IntegrasiRedux";
+import IntegrateFetchAPI from "./screens/FetchApi"
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,7 @@ const AppSrc = () => {
         <Stack.Screen name="Post" options={{}} component={PostScreen} />
         <Stack.Screen name="ReduxConcept" options={{}} component={ReduxConcept} />
         <Stack.Screen name="IntegrasiRedux" options={{}} component={IntegrasiRedux} />
+        <Stack.Screen name="IntegrasiFetch" options={{}} component={IntegrateFetchAPI} />
       </Stack.Navigator>
     </NavigationContainer>
   );
