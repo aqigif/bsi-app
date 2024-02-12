@@ -1,10 +1,11 @@
 // ProductList.js
 import React, { useEffect , useState} from 'react';
 import { View, Text, ActivityIndicator, FlatList } from 'react-native';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { fetchProducts } from '../actions/action';
 
-const IntegrateFetchAPI = ({ products, loading, error, fetchProducts }) => {
+const IntegrateFetchAPI = ({ products, loading, error }) => {
+  const dispatch = useDispatch()
   
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -23,16 +24,16 @@ const IntegrateFetchAPI = ({ products, loading, error, fetchProducts }) => {
   };
 
   useEffect(() => {
-    getMovies();
+    fetchProducts()(dispatch);
   }, []);
-
+  
   return (
     <View style={{flex: 1, padding: 24}}>
-      {isLoading ? (
+      {loading ? (
         <ActivityIndicator />
       ) : (
         <FlatList
-          data={data}
+          data={products?.movies || []}
           keyExtractor={({id}) => id}
           renderItem={({item}) => (
             <Text>
@@ -51,4 +52,4 @@ const mapStateToProps = state => ({
   error: state.error
 });
 
-export default connect(mapStateToProps, { fetchProducts })(IntegrateFetchAPI);
+export default connect(mapStateToProps)(IntegrateFetchAPI);
